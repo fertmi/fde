@@ -1,0 +1,100 @@
+$highlight-color: #d04f54
+$border-color: lightgray
+
+#calendar
+  .content
+    display: grid
+    grid-template-rows: 40px 1fr
+
+    .header
+      align-items: center
+      display: grid
+      grid-column-gap: 5px
+      grid-template-columns: 50px 1fr 50px
+
+      .month
+        justify-self: center
+        font-size: 2rem
+        font-family: 'Oswald'
+        text-transform: uppercase
+        color: $highlight-color
+
+      .left-arrow
+        justify-self: end
+
+        span
+          cursor: pointer
+
+      .right-arrow
+        justify-self: start
+
+        span
+          cursor: pointer
+
+    .body
+      align-items: center
+      display: grid
+      grid-template-columns: repeat(7, 1fr)
+      grid-template-rows: repeat(7, 1fr)
+      justify-items: center
+
+      .day-name-container
+        height: 20px
+        width: 100%
+        text-align: center
+        background-color: #ececec
+        border: 1px solid $border-color
+        border-left: none
+        transform: translateY(4px)
+
+      .day-name
+        color: black
+        font-weight: bold
+        font-size: 1.4rem
+
+      .day-container
+        display: grid
+        grid-auto-columns: 1fr 1fr
+        grid-auto-flow: column
+        height: 28px
+        position: relative
+        width: 100%
+
+        .day
+          box-sizing: content-box
+          color: black
+          font-weight: bold
+          display: grid
+          height: 28px
+          width: 100%
+          padding-right: 2px
+          justify-content: right
+          left: 50%
+          position: absolute
+          top: 50%
+          transform: translate(-50%, -50%)
+
+          &.today
+            border: 2px solid $highlight-color
+            color: black
+            height: 26px
+            width: calc(100% - 4px)
+
+          &.off-day
+            color: $highlight-color !important
+
+          span
+            font-size: 1.4rem
+            margin: 0
+            padding: 0
+            width: fit-content
+
+  .calendar
+    background-color: white
+    border: 1px solid $highlight-color
+
+    .body
+      .day-container
+        border: 1px solid $border-color
+        border-left: none
+        border-top: none

@@ -1,0 +1,62 @@
+{
+  "app": {
+    "title": "All-russian festival of Orthodox singing traditions «Istoki»"
+  },
+  "header": {},
+  "nav": {
+    "main": "Main page",
+    "participants": "Participants",
+    "facts": "Facts and info",
+    "smi": "Mass Media about us",
+    "review" : "Review",
+    "ourHistory": "Our history",
+    "photos": "Photo gallery",
+    "audio": "Audio",
+    "video": "Video",
+    "contacts": "Contacts",
+    "promoters": "Promoters",
+    "events": "Events",
+    "partners": "Partners"
+  },
+  "main": {
+    "title": "About",
+    "schedule": "Schedule",
+    "program" : "Festival program",
+    "datesTitle": "Festival dates in {year}:",
+    "dates": {
+      "start": "The opening on",
+      "startDay": "3",
+      "startMonth": "May",
+      "endDay": "",
+      "endMonth": ""
+    },
+    "startDate": "",
+    "cities": "St.Petersburg • Tikhvin • Gatchina"
+  },
+  "events": {
+    "title": "Schedule"
+  },
+  "facts": {
+    "section": "Section «Opinion»",
+    "articles": "Articles"
+  },
+  "promoters": {
+    "title": "Promoters"
+  },
+  "aside": {
+    "takePartBtn": "Take part",
+    "helpUsBtn": "Help the festival",
+    "siteBtn": "Website",
+    "partners": "Our partners"
+  },
+  "timer": {
+    "title": "Before start:",
+    "days": "d.",
+    "hours": "h.",
+    "minutes": "m."
+  },
+  "footer": {
+    "contactLink": "Contact info",
+    "social": "Social networks:"
+  }
+}

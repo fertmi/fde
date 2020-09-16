@@ -1,0 +1,26 @@
+@mixin font-face($font-family, $name, $font-weight: normal, $font-style: normal) {
+  font-family: '#{$font-family}';
+  src: url('https://raw.githubusercontent.com/Max1992/fde-storage/master/fonts/#{$name}.woff2') format('woff2');
+  src: url('https://raw.githubusercontent.com/Max1992/fde-storage/master/fonts/#{$name}.woff') format('woff');
+  /*src: url('~@/assets/fonts/#{$name}/#{$name}.eot') format('embedded-opentype'),
+  url('~@/assets/fonts/#{$name}/#{$name}.woff2') format('woff2'),
+  url('~@/assets/fonts/#{$name}/#{$name}.woff') format('woff'),
+  url('~@/assets/fonts/#{$name}/#{$name}.ttf') format('truetype');*/
+  font-weight: $font-weight;
+  font-style: $font-style;
+}
+
+@font-face {
+  @include font-face(Kelson, KelsonSans-RegularRU);
+  font-weight: normal;
+}
+
+@font-face {
+  @include font-face(Kelson, KelsonSans-LightRU);
+  font-weight: 300;
+}
+
+@font-face {
+  @include font-face(Kelson, KelsonSans-BoldRU);
+  font-weight: bold;
+}

@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./wwwroot/api",
+    "sourceMap": false,
+    "types": ["node"],
+    "typeRoots": [ "../node_modules/@types" ]
+  },
+  "include": [
+    "api/**/*.ts"
+  ],
+  "exclude": [
+    "src/**/*.ts"
+  ]
+}
