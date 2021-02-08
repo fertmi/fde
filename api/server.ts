@@ -19,6 +19,8 @@ const wwwroot = path.join(path.resolve(), 'public');
  "/"
 ].forEach((route) => app.use(route, express.static(wwwroot)));
 
+app.use('/storage', express.static('../../fde-storage'));
+
 /**
  * Configure the api
  */
