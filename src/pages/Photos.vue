@@ -1,5 +1,5 @@
 <template>
-  <div>В разработке</div>
+  <div>Эта страница в разработке</div>
 </template>
 
 <script lang="ts">

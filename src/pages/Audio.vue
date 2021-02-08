@@ -1,5 +1,5 @@
 <template>
-  <div>В разработке</div>
+  <div>В разработке audio</div>
 </template>
 
 <script lang="ts">

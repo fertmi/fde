@@ -60,6 +60,10 @@ export class EventManager {
         return this.rawRequest(`participant/${locale}/${this.getEventId(event)}.md`);
     }
 
+    public getVideoContentAsync(locale: string, event: ScheduleEvent): Observable<IMarkdownResponse>{
+        return this.rawRequest(`history/${locale}/video/${this.getEventId(event)}.md`);
+    }
+
     public getSectionOpinionContentAsync(locale: string): Observable<IMarkdownResponse>{
         return this.rawRequest(`facts/${locale}/section-opinion.md`);
     }

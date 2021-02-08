@@ -15,6 +15,7 @@ export default new Vuex.Store({
     schedule: [], // the schules list
     content: null, // the text in markdown style
     participantContent: null, // the participant content
+    videoContent: null, // video content
     activeSchedule: null, // active schedule
     historyContent: null, // history content
     opinionSectionContent: null,
@@ -43,6 +44,13 @@ export default new Vuex.Store({
     },
     SET_PARTICIPANT_EVENT_CONTENT_ERROR: (state, payload) => {
       state.participantContent = payload.content;
+    },
+
+    SET_VIDEO_EVENT_CONTENT_OK: (state, payload) => {
+      state.videoContent = payload.content;
+    },
+    SET_VIDEO_EVENT_CONTENT_ERROR: (state, payload) => {
+      state.videoContent = payload.content;
     },
 
     SCHEDULE_DATA_OK: (state, payload) => {
@@ -115,6 +123,21 @@ export default new Vuex.Store({
         commit('SET_PARTICIPANT_EVENT_CONTENT_OK', { content: text });
       }, (error) => {
         commit('SET_PARTICIPANT_EVENT_CONTENT_ERROR', { error: error.toString() });
+      })
+    },
+    /**
+     * Get the video content
+     * @param param0
+     * @param event
+     */
+    GET_VIDEO_EVENT_CONTENT({commit}, payload: EventPayload) {
+      var manager: EventManager = new EventManager();
+
+      manager.getVideoContentAsync(payload.language, payload.event).subscribe((response: IMarkdownResponse) => {
+        const text: string = response.text as string;
+        commit('SET_VIDEO_EVENT_CONTENT_OK', { content: text });
+      }, (error) => {
+        commit('SET_VIDEO_EVENT_CONTENT_ERROR', { error: error.toString() });
       })
     },
     /**
