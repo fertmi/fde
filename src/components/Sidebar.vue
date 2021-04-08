@@ -1,7 +1,7 @@
 <template>
   <aside class="sidebar">
     <LocalizedLink v-if="showHelpUsBtn" to="/payment" class="sidebar__button help-us"><span>{{ $t('aside.helpUsBtn') }}</span></LocalizedLink>
-    <a href="https://raw.githubusercontent.com/Max1992/fde-storage/master/files/информационное письмо.pdf" class="sidebar__button take-part"><span>{{ $t('aside.takePartBtn') }}</span></a>
+    <a href="https://raw.githubusercontent.com/Max1992/fde-storage/master/files/Истоки_заявка на участие.pdf" class="sidebar__button take-part"><span>{{ $t('aside.takePartBtn') }}</span></a>
     <a href="http://www.derzhavnaya.spb.ru" target="_blank" class="sidebar__button website"></a>
     <a href="https://www.youtube.com/channel/UC1LUp3x8sjH5amGJLamw57g" target="_blank" class="sidebar__youtube">
       <div class="title">online-трансляция мероприятий</div>
