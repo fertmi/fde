@@ -19,7 +19,7 @@
 
     <PageTitle :title='$t("main.schedule")' />
     <div class="main__schedule">
-      <img src="../assets/img/start.jpg" />
+      
       <div class="schedule-info">
         <p>
           ОТКРЫТ ПРИЕМ ЗАЯВОК НА 2021 ГОД
